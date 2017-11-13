@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  <table>
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Obtained Marks</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+    <script>
+        var subj1 = prompt('Enter 1st subject name');
+        var subj2 = prompt('Enter 2nd subject name');
+        var subj3 = prompt('Enter 3rd subject name');
+        var totalMarksOfEachSubj = 100;
+        var obtMarksSubj1 = prompt('Enter obtained marks of ' + subj1);
+        var obtMarksSubj2 = prompt('Enter obtained marks of ' + subj2);
+        var obtMarksSubj3 = prompt('Enter obtained marks of ' + subj3);
+        var perOfSubj1 = (obtMarksSubj1 / totalMarksOfEachSubj) * 100;
+        var perOfSubj2 = (obtMarksSubj2 / totalMarksOfEachSubj) * 100;
+        var perOfSubj3 = (obtMarksSubj3 / totalMarksOfEachSubj) * 100;
+        var obtMarksTotal =parseInt( obtMarksSubj1) + parseInt( obtMarksSubj2) + parseInt( obtMarksSubj3);
+        var totalMarks = totalMarksOfEachSubj * 3;
+        var avgPercentage = (obtMarksTotal / totalMarks) * 100;
+        document.write('<table> <tr> <th>Subject</th> <th>Obtained Marks</th> <th>Total Marks</th> <th>Percentage</th> </tr> <tr> <td>' + subj1 + '</td><td>' + obtMarksSubj1 + '</td><td>' + totalMarksOfEachSubj + '</td><td>' + perOfSubj1 + '</td></tr> <tr> <td>' + subj2 + '</td><td>' + obtMarksSubj2 + '</td><td>' + totalMarksOfEachSubj + '</td><td>' + perOfSubj2 + '</td></tr> <tr> <td>' + subj3 + '</td><td>' + obtMarksSubj3 + '</td><td>' + totalMarksOfEachSubj + '</td><td>' + perOfSubj3 + '</td></tr> <tr> <th></th><th>'+obtMarksTotal+'</th><th>'+totalMarks+'</th><th>'+parseInt( avgPercentage)+'%'+'</th></tr></table>')
+    </script>
+</body>
+
+</html>

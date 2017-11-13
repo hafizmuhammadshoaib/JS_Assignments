@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var corrPass = "shoaib";
+        var userPass = prompt("enter your password");
+        while (userPass.length == 0) {
+            userPass = prompt("please enter your password");
+        }
+        if (userPass === corrPass) {
+            alert("Correct!");
+        }
+        else {
+            alert("incorrect password");
+        }
+    </script>
+</body>
+
+</html>

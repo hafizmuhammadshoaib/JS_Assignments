@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var cityNames = ["Karachi", "Islamabad", "Quetta", "Peshawar", "Lahore"];
+        document.write("city names: ");
+        for (var i = 0; i < cityNames.length; i++) {
+            document.write(cityNames[i] + ', ');
+        }
+        var selectedCities = cityNames.slice(0, 3);
+        document.write("<br /> selected cities: ");
+        for (var i = 0; i < selectedCities.length; i++) {
+            document.write(selectedCities[i] + ', ');
+        }
+    </script>
+</body>
+
+</html>

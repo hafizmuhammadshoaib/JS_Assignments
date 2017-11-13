@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Marks Sheet</h1>
+    <script>
+        var paraElement = document.createElement("p");
+        var bodyElement = document.body;
+        bodyElement.appendChild(paraElement);
+        var totalMarksOfEachSubj = 100;
+        var obtMarksSubj1 = prompt('Enter obtained marks of subject 1');
+        var obtMarksSubj2 = prompt('Enter obtained marks of subject 2');
+        var obtMarksSubj3 = prompt('Enter obtained marks of subject 3');
+        var perOfSubj1 = (obtMarksSubj1 / totalMarksOfEachSubj) * 100;
+        var perOfSubj2 = (obtMarksSubj2 / totalMarksOfEachSubj) * 100;
+        var perOfSubj3 = (obtMarksSubj3 / totalMarksOfEachSubj) * 100;
+        var obtMarksTotal = parseInt(obtMarksSubj1) + parseInt(obtMarksSubj2) + parseInt(obtMarksSubj3);
+        var totalMarks = totalMarksOfEachSubj * 3;
+        var avgPercentage = (obtMarksTotal / totalMarks) * 100;
+        if (avgPercentage >= 80) {
+            paraElement.appendChild(document.createTextNode("Total marks : " + totalMarks));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Marks Obtained: " + obtMarksTotal));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("percentage: " + avgPercentage));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Grade : " + "A-one"));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Remarks : " + "Excellent"));
+            paraElement.appendChild(document.createElement("br"));
+
+            bodyElement.appendChild(paraElement);
+        }
+        else if (avgPercentage >= 70) {
+            paraElement.appendChild(document.createTextNode("Total marks : " + totalMarks));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Marks Obtained: " + obtMarksTotal));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("percentage: " + avgPercentage));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Grade : " + "A"));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Remarks : " + "Good"));
+            paraElement.appendChild(document.createElement("br"));
+
+            bodyElement.appendChild(paraElement);
+        }
+        else if (avgPercentage >= 60) {
+            paraElement.appendChild(document.createTextNode("Total marks : " + totalMarks));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Marks Obtained: " + obtMarksTotal));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("percentage: " + avgPercentage));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Grade : " + "B"));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Remarks : " + "You need to improve"));
+            paraElement.appendChild(document.createElement("br"));
+
+            bodyElement.appendChild(paraElement);
+        }
+        else if (avgPercentage < 60) {
+            paraElement.appendChild(document.createTextNode("Total marks : " + totalMarks));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Marks Obtained: " + obtMarksTotal));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("percentage: " + avgPercentage));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Grade : " + "Fail"));
+            paraElement.appendChild(document.createElement("br"));
+
+            paraElement.appendChild(document.createTextNode("Remarks : " + "Sorry"));
+            paraElement.appendChild(document.createElement("br"));
+
+            bodyElement.appendChild(paraElement);
+        }
+    </script>
+</body>
+
+</html>

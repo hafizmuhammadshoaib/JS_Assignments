@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var colorNames = ["red", "yellow", "green", "blue", "orange", "white", "purple", "black"];
+        for (var i = 0; i < colorNames.length; i++) {
+            document.write(colorNames[i] + "<br />");
+
+        }
+        var coloratBegin = prompt("what color you want to show at the beginning");
+        colorNames.unshift(coloratBegin);
+        document.write("<h2>updated array:</h2>");
+        for (var i = 0; i < colorNames.length; i++) {
+            document.write(colorNames[i] + "<br />");
+
+        }
+    </script>
+</body>
+
+</html>

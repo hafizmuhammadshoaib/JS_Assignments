@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var item = prompt("Welcome to ABC Bakery what you want to order sir/mam");
+var found = false;
+for (var i = 0; i <=A.length ; i++) {
+            if (A[i]===item){
+                found =true;
+                document.write('Cookie is available at index '+ i + 'in our bakery');
+                break;
+            }
+        }
+        if (!found){
+            document.write('We are sorry ' +'<b>'+item+'</b>' + ' is not available in our bakery');
+        }
+
+    </script>
+</body>
+
+</html>

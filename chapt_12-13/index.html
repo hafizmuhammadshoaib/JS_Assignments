@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var userChar = prompt("Enter a character");
+        if (userChar.charCodeAt(0) >= 65 && userChar.charCodeAt(0) <= 90) {
+            alert("first character is upper case letter");
+        }
+        else if (userChar.charCodeAt(0) >= 97 && userChar.charCodeAt(0) <= 122) {
+            alert("first character is lower case letter");
+        }
+        else if (userChar.charCodeAt(0) >= 48 && userChar.charCodeAt(0) <= 57) {
+            alert("first character is number");
+        }
+    </script>
+</body>
+
+</html>

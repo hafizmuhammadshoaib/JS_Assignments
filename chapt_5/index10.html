@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var priceItem1 = 650;
+        var priceItem2 = 100;
+        var quantityItem1 = 3;
+        var quantityItem2 = 7;
+        var shippingCharges = 100;
+        var totalCost;
+        document.write('Price of item 1 is ' + priceItem1 + '<br />');
+        document.write('Quantity of item 1 is ' + quantityItem1 + '<br />');
+        document.write('Price of item 2 is ' + priceItem2 + '<br />');
+        document.write('Quantity of item 2 is ' + quantityItem2 + '<br />');
+        document.write('Shipping charges ' + shippingCharges + '<br />' + '<br />');
+        totalCost = (priceItem1 * quantityItem1) + (priceItem2 * quantityItem2) + shippingCharges;
+        document.write('Total cost of your order is ' + totalCost);
+    </script>
+</body>
+
+</html>

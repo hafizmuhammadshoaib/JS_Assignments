@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = 35.36;
+        var index = num.toString().indexOf(".");
+        var subString1 = num.toString().slice(0, index);
+        var subString2 = num.toString().slice(index + 1);
+        document.write("Number:" + num + "<br />");
+        document.write("Result: " + subString1 + subString2);
+    </script>
+</body>
+
+</html>

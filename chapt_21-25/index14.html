@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        var userInput = prompt("Enter an input to find in an array");
+        for (var i = 0; i < A.length; i++) {
+            if(userInput.toLowerCase()=== A[i]){
+                document.write("Found at index:" + i)
+            }
+            else{
+                document.write("It is not found");
+            }
+        }
+    </script>
+</body>
+
+</html>

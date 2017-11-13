@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var university = "University of Karachi";
+        var wordArray = university.split(" ");
+        
+        var letterArray ;
+        for (var i = 0; i < wordArray.length; i++) {
+           letterArray = wordArray[i].split("");
+            
+             for (var j = 0; j < letterArray.length; j++) {
+                document.write(letterArray[j]+ " <br />");
+            } 
+        }
+    </script>
+</body>
+
+</html>

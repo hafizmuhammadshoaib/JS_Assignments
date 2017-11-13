@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var message = "Ali and Sami are best friends. They play cricket andfootball together.";
+        document.write("Original String: " + message + "<br />");
+        var index = message.indexOf("and");
+        var subString1 = message.slice(0, index);
+        var subString2 = message.slice(index + 3);
+        document.write(subString1 + "&" + subString2);
+    </script>
+</body>
+
+</html>
