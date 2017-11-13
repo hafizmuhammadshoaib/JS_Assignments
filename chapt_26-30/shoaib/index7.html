@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var randomNum = Math.random();
+        var roundOff = Math.floor(randomNum * 10) + 1;
+        var userNum = prompt("Guess a number between 1 and 10");
+        if (userNum == roundOff) {
+            alert("Good! you have guess the correct num " + roundOff);
+
+        }
+        else {
+            alert("Sorry! Try Again ");
+
+        }
+    </script>
+</body>
+
+</html>
