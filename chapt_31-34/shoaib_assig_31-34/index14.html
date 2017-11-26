@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        K-Electric Bill
+    </h1>
+    <b></b>
+    <br />
+    <script>
+        var numOfUnits = 410;
+        var chargePerUnit = 16;
+        var lateSurcharge = 350;
+        document.write("Customer Name: " + "<b>ABC Customer</b><br />");
+        document.write("Month: <b>November</b>    <br />");
+        document.write("Number of Units: " + numOfUnits + "    <br />");
+        document.write("Charges per unit: " + chargePerUnit + "    <br />    <br />");
+        document.write("Net amount payable (within Due Date):"+ (numOfUnits*chargePerUnit)+"    <br />");
+        document.write("Late Payment Surcharge: "+ lateSurcharge+"    <br />");
+        document.write("Gross Amount Payable (after Due Date): " + ((numOfUnits*chargePerUnit)+lateSurcharge));
+
+
+
+    </script>
+</body>
+
+</html>

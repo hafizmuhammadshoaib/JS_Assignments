@@ -10,6 +10,11 @@
 
 <body>
     <script>
+        var beginOfYear = new Date(2017,1,1).getTime();
+        console.log(beginOfYear);
+        var todayDate = new Date().getTime();
+        console.log(todayDate);
+        document.write("On reference date " + new Date() + " " + ((todayDate - beginOfYear) / 1000) + " seconds had passed since beginning of 2017");
 
     </script>
 </body>
