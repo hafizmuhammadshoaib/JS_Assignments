@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var pass = prompt("Enter your password");
+        document.write("password is: " + pass + "<br />");
+        if (pass.charCodeAt(0) >= 48 && pass.charCodeAt(0) <= 57) {
+            document.write("Password cannot begin with a number<br/ > Please enter a valid password");
+        }
+        else if (pass.length < 6) {
+            document.write("Password length is less than 6 <br/ > Please enter a valid password");
+        }
+        else if (pass.match("/^[0-9a-zA-Z]+$/") ) {
+            document.write("password must contain numbers and alphabets");
+        }
+
+    </script>
+</body>
+
+</html>
