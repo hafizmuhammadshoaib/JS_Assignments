@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    var string = prompt("Enter any string or number to check whether it is palindrome or not ");
+    var flag = palindrome(string);
+    if(flag){
+        document.write("This is palindrome");
+
+    }
+    else{
+        document.write("Not a palindrome");
+    }
+    function palindrome(string){
+        var newString="";
+        for (var i=string.length; i>=0;i--){
+            newString += string.charAt(i);
+        }
+    
+        if(newString==string){
+            
+            return true;
+        }
+    }
+    </script>
+</body>
+</html>

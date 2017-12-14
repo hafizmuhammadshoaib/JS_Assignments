@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("Occurenc L in Hello is: " + countSpecLetter("hello", "l"));
+        function countSpecLetter(string, letter) {
+            var count = 0;
+            var start = 0;
+            var value = -1;
+            for (var index = 0; index < string.length; index++) {
+                value = string.indexOf(letter, start);
+                if (value != -1) {
+                    count++;
+                    console.log(value);
+                    start = value + 1;
+                }
+                else {
+                    break;
+                }
+            }
+            return count;
+        }
+
+    </script>
+</body>
+
+</html>

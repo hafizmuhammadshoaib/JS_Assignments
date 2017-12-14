@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var input = prompt("Enter a sentence to check the longest word in it");
+        var array = input.split(" ");
+        console.log(array);
+        document.write("Longest word with in the string is: " + longestWord(array));
+
+
+        function longestWord(array) {
+            console.log(array);
+            var maxLength = 0;
+            var maxLengthString = "";
+            for (var index = 0; index < array.length; index++) {
+                console.log(array[index]);
+                if (array[index].length > maxLength) {
+                    maxLength = array[index].length;
+                    maxLengthString = array[index];
+                }
+            }
+            return maxLengthString;
+        }
+    </script>
+</body>
+
+</html>

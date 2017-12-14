@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var userInput = prompt("Enter string to init cap");
+        var array = userInput.split(" ");
+        console.log(array);
+        document.write(firstCap(array));
+
+        function firstCap(array) {
+            var cap = "";
+            var remWord = "";
+            for (var i = 0; i < array.length; i++) {
+                cap = array[i].charAt(0).toUpperCase();
+                remWord += cap;
+                console.log(array[i].length)
+                for (var index = 1; index < array[i].length; index++) {
+                    remWord += array[i].charAt(index);
+
+                }
+                array[i] = remWord + " ";
+                cap = "";
+                remWord = "";
+            }
+            return array.join("").toString();
+        }
+    </script>
+
+</body>
+
+</html>
