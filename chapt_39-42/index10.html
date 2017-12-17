@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var input = prompt("enter amount to be withdrawn ");
+        document.write(cashWithDrawn(input));
+        function cashWithDrawn(amount) {
+            var hundreds = amount / 100;
+            hundreds = Math.floor(hundreds);
+            var fiftees = amount % 100;
+            var tens = 0;
+            if (fiftees >= 50) {
+                tens = fiftees - 50;
+                tens /= 10;
+                fiftees = 1;
+            }
+            else if (fiftees < 50) {
+                tens = fiftees;
+                fiftees = 0;
+                tens /= 10;
+            }
+
+            return "You will have " + hundreds + " hundred notes " + fiftees + " fifty notes and " + tens + " ten notes";
+        }
+
+    </script>
+</body>
+
+</html>
