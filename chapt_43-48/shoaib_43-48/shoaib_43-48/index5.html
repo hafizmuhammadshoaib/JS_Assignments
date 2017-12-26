@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th> index</th>
+            <th> Name</th>
+            <th>Class</th>
+
+        </tr>
+        <table id="new-table">
+            <tr>
+                <th> index</th>
+                <th> Name</th>
+                <th>Class</th>
+
+            </tr>
+        </table>
+        <script>
+            var indexArray = [0, 1, 2];
+            var nameArray = ['shoaib', 'john', 'zohaib'];
+            var classArray = ['10', '9', '8'];
+            render();
+            function render() {
+                for (var i = 0; i < nameArray.length; i++) {
+                    document.getElementById("table").innerHTML += "<tr id=" + i + "><td>" + indexArray[i] + "</td>" + "<td>" + nameArray[i] + "</td>" + "<td>" + classArray[i] + "</td>" + "<td><button onclick='deleteRow("+i+")'> delete</button></td>" + "</tr>"
+                }
+            }
+            function renderOnNewTable() {
+                for (var i = 0; i < nameArray.length; i++) {
+                    document.getElementById("new-table").innerHTML += "<tr id=" + i + "><td>" + i + "</td>" + "<td>" + nameArray[i] + "</td>" + "<td>" + classArray[i] + "</td>" + "<td><button onclick='deleteRow(this)'> delete</button></td>" + "</tr>"
+                }
+            }
+            function deleteRow(element) {
+                
+                console.log('element.id ::', element);
+                indexArray.splice(element,1);
+                nameArray.splice(element,1);
+                classArray.splice(element,1);
+                document.getElementById('table').innerHTML = '';
+                 render();
+                
+
+
+            }
+        </script>
+</body>
+
+</html>
