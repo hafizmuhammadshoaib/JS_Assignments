@@ -31,7 +31,7 @@
             render();
             function render() {
                 for (var i = 0; i < nameArray.length; i++) {
-                    document.getElementById("table").innerHTML += "<tr id=" + i + "><td>" + indexArray[i] + "</td>" + "<td>" + nameArray[i] + "</td>" + "<td>" + classArray[i] + "</td>" + "<td><button onclick='deleteRow("+i+")'> delete</button></td>" + "</tr>"
+                    document.getElementById("table").innerHTML += "<tr id=" + i + "><td>" + indexArray[i] + "</td>" + "<td>" + nameArray[i] + "</td>" + "<td>" + classArray[i] + "</td>" + "<td><button onclick='deleteRow(" + i + ")'> delete</button></td>" + "</tr>"
                 }
             }
             function renderOnNewTable() {
@@ -40,14 +40,14 @@
                 }
             }
             function deleteRow(element) {
-                
+
                 console.log('element.id ::', element);
-                indexArray.splice(element,1);
-                nameArray.splice(element,1);
-                classArray.splice(element,1);
+                indexArray.splice(element, 1);
+                nameArray.splice(element, 1);
+                classArray.splice(element, 1);
                 document.getElementById('table').innerHTML = '';
-                 render();
-                
+                render();
+
 
 
             }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="inputElements" onsubmit="return onSubmit(event)">
+        <input id="name" type="text" placeholder="Name" />
+        <input id="textField" type="text" placeholder="Email" />
+        <input id="pass" type="password" placeholder="Password" />
+        <input id="btn" type="submit" value="submit" />
+    </form>
+    <div id="afterSubmit">
+
+    </div>
+
+    <script>
+        function onSubmit(evt) {
+            evt.preventDefault();
+            var name = document.getElementById("name").value;
+            document.getElementById("inputElements").innerHTML = "";
+            document.getElementById("afterSubmit").innerHTML = `<h1>Congrats!You signup successfully</h1><p>Welcome ${name}!</p>`;
+        }
+
+    </script>
+</body>
+
+</html>

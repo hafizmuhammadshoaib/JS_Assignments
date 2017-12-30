@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table">
+        <tr>
+            <th> index</th>
+            <th> Name</th>
+            <th>Class</th>
+
+        </tr>
+
+
+    </table>
+    <div id="form">
+
+    </div>
+    <script>
+        var indexArray = [0, 1, 2];
+        var nameArray = ['shoaib', 'john', 'zohaib'];
+        var classArray = ['10', '9', '8'];
+        render();
+        function render() {
+            for (var i = 0; i < nameArray.length; i++) {
+                document.getElementById("table").innerHTML += "<tr class='row' id=" + i + "><td>" + indexArray[i] + "</td>" + "<td>" + nameArray[i] + "</td>" + "<td>" + classArray[i] + "</td>" + "<td><button onclick='deleteRow(" + i + ")'> delete</button></td><td><button onclick='updateRow(" + i + ")'>edit</button></td>" + "</tr>"
+            }
+        }
+
+
+        function deleteRow(element) {
+            console.log('element.id ::', element);
+            indexArray.splice(element, 1);
+            nameArray.splice(element, 1);
+            classArray.splice(element, 1);
+
+            var row = document.getElementsByClassName('row');
+            for (var i = 0; i < row.length; i++) {
+                row[i].innerHTML = '';
+
+            }
+            render();
+        }
+        function updateRow(element) {
+            document.getElementById('form').innerHTML += "<input id='name' type='text' placeholder='Name'/> <input id='clas' type='text' placeholder='class'/> <input type='button' value='submit' onclick='onClickSubmit(" + element + ")'>"
+
+        }
+        function onClickSubmit(element) {
+            console.log('onClickSubmit');
+            var name = document.getElementById('name').value;
+            var clas = document.getElementById('clas').value;
+            nameArray[element] = name;
+            classArray[element] = clas;
+            document.getElementById('form').innerHTML = "";
+            var row = document.getElementsByClassName('row');
+            for (var i = 0; i < row.length; i++) {
+                row[i].innerHTML = '';
+
+            }
+            render();
+
+        }
+    </script>
+</body>
+
+</html>
