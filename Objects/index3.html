@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Plans(name, price, diskSpace, dataTransfer, sitePages, discountMonth) {
+            this.name = name,
+                this.price = price,
+                this.diskSpace = diskSpace,
+                this.dataTransfer = dataTransfer,
+                this.sitePages = sitePages,
+                this.discountMonth = discountMonth
+        };
+        let basicPlan = new Plans("basic", "$3.99", "100GB", "100GB/month", "10", "july,aug");
+        let proPlan = new Plans('pro', '$5.99', '500GB', '5000GB/month', '50', 'july,aug,dec');
+        let ultPlam = new Plans('ult', '$9.99','2000GB', '20000GB/month', '500', 'july,aug');
+        function print(obj){
+            console.log(obj.name);
+            console.log(obj.price);
+            console.log(obj.diskSpace);
+            console.log(obj.dataTransfer);
+            console.log(obj.sitePages);
+            console.log(obj.discountMonth);
+        }
+        print(basicPlan);
+        print(proPlan);
+        print(ultPlam);
+    </script>
+</body>
+
+</html>

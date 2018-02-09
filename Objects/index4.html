@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="return submitFunction()">
+        <div>
+            <label for="firstName">First Name:
+                <input id="firstName" type="text">
+            </label>
+        </div>
+        <div>
+            <label for="lastName">Last Name:
+                <input id="lastName" type="text">
+            </label>
+        </div>
+        <div>
+            Gender:
+            <label for="maleRadio">Male
+                <input id="maleRadio" name="Gender" type="radio" value="male" checked="checked" />
+            </label>
+            <label for="femaleRadio">Female
+                <input id="femaleRadio" name="Gender" type="radio" value="female" />
+            </label>
+        </div>
+        <div>
+            <label for="addTextArea">Address:
+                <br/>
+                <textarea name="" id="addTextArea" cols="30" rows="10"></textarea>
+            </label>
+        </div>
+        <div>
+            <select name="Education" id="education">Your qualification:
+                <option value="Matric">Matric</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Bachelor">Bachelor</option>
+                <option value="Master">Master</option>
+            </select>
+        </div>
+        <div>
+            <select name="Profession" id="profession">Your Profession
+                <option value="Business">Business</option>
+                <option value="Job">Job</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="submit" />
+        </div>
+    </form>
+    <script>
+        let count = 0;
+        function submitFunction() {
+            let genderValue = "";
+            let addressValue = "";
+            let eduSelValue = "";
+            let proSelValue = "";
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+            console.log(firstName);
+            console.log(lastName);
+
+
+            let eduSel = document.getElementById('education');
+            eduSelValue = eduSel.options[eduSel.selectedIndex].value;
+            console.log(eduSelValue);
+
+
+
+            let proSel = document.getElementById('profession');
+            proSelValue = proSel.options[proSel.selectedIndex].value;
+            console.log(proSelValue);
+
+
+
+            if (document.getElementById('maleRadio').checked) {
+                genderValue = document.getElementById('maleRadio').value;
+                console.log(genderValue);
+            }
+            else if (document.getElementById('femaleRadio').checked) {
+                genderValue = document.getElementById('femaleRadio').value;
+                console.log(genderValue);
+            }
+
+
+            addressValue = document.getElementById("addTextArea").value;
+            console.log(addressValue);
+
+            console.log(new InfoObj(firstName, lastName, genderValue, addressValue, eduSelValue, proSelValue));
+
+           localStorage.setItem("userData" + (++count),JSON.stringify (new InfoObj(firstName, lastName, genderValue, addressValue, eduSelValue, proSelValue)));
+
+        }
+        function InfoObj(firstName, lastName, gender, address, edu, prof) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gender = gender;
+            this.address = address;
+            this.edu = edu;
+            this.prof = prof;
+
+        }
+
+    </script>
+</body>
+
+</html>

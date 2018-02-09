@@ -27,10 +27,13 @@
 
     <script>
         function onSubmit(evt) {
-            evt.preventDefault();
-            var name = document.getElementById("name").value;
-            document.getElementById("inputElements").innerHTML = "";
-            document.getElementById("afterSubmit").innerHTML = `<h1>Congrats!You signup successfully</h1><p>Welcome ${name}!</p>`;
+                console.log(evt);
+                var name = document.getElementById("name").value;
+                document.getElementById("inputElements").innerHTML = "";
+                document.getElementById("afterSubmit").innerHTML = `<h1>Congrats!You signup successfully</h1><p>Welcome ${name}!</p>`;
+            
+            
+            
         }
 
     </script>
